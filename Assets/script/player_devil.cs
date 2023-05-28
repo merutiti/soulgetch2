@@ -32,6 +32,7 @@ public class player_devil : MonoBehaviour
     // ゲームオブジェクト同士が接触したタイミングで実行
     void OnTriggerEnter2D(Collider2D col)
     {
+        //正解の場合
         if (col.gameObject.tag == "orange")
         {
             audioSource.PlayOneShot(correct);

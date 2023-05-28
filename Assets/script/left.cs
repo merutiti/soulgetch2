@@ -17,7 +17,7 @@ public class left : MonoBehaviour
 
     void FixedUpdate()
 	{ // ‚¸‚Á‚Æs‚¤iˆê’èŠÔ‚²‚Æ‚Éj
-		this.transform.Translate(speed/50, 0, 0); // ‚’¼ˆÚ“®‚·‚é
+		this.transform.Translate(speed/50, 0, 0); 
 	}
 }
 

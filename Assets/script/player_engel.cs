@@ -18,6 +18,7 @@ public class player_engel : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
+        //³‰ğ‚Ìê‡iŠÔˆá‚Á‚½‚Ìˆ—‚Íplayer_devil‚É‚Äˆ—‚·‚éj
         if (col.gameObject.tag == "green")
         {
             p_d.score++ ;

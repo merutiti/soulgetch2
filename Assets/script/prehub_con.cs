@@ -5,16 +5,16 @@ using UnityEngine;
 public class prehub_con: MonoBehaviour
 {
     //プレハブ
-    public GameObject engel_con_top;
-    public GameObject devil_con_top;
-    public GameObject engel_con_Diagonallyup_right;
-    public GameObject devil_con_Diagonallyup_right;
-    public GameObject devil_con_Diagonallyup_left;
-    public GameObject engel_con_Diagonallyup_left;
-    public GameObject engel_con_side_left;
-    public GameObject engel_con_side_right;
-    public GameObject devil_con_side_left;
-    public GameObject devil_con_side_right;
+    public GameObject engel_con_top;//上から出るオレンジ魂
+    public GameObject devil_con_top;//上から出るグリーン魂
+    public GameObject engel_con_Diagonallyup_right;//右上から出るオレンジ魂
+    public GameObject devil_con_Diagonallyup_right;//右上から出るグリーン魂
+    public GameObject devil_con_Diagonallyup_left;//左上から出るグリーン魂
+    public GameObject engel_con_Diagonallyup_left;//左上から出るオレンジ魂
+    public GameObject engel_con_side_left;//左から出るオレンジ魂
+    public GameObject engel_con_side_right;//右から出るオレンジ魂
+    public GameObject devil_con_side_left;//左から出るグリーン魂
+    public GameObject devil_con_side_right;//右から出るグリーン魂
 
 
     //敵生成時間間隔
@@ -22,11 +22,11 @@ public class prehub_con: MonoBehaviour
     
     //経過時間
     private float time = 0f;
-
+    //魂の生成制御用
     private bool swith = false;
-
+    //魂生成の場所制御用
     public int rand = 0;
-
+    //魂の生成カウント数用
     int soul_cnt;
 
 
@@ -63,10 +63,10 @@ public class prehub_con: MonoBehaviour
                 {
                     interval -= 0.2f;
                 }
-                //enemyをインスタンス化する(生成する)
+                //インスタンス化する(生成する)
                 GameObject en_con = Instantiate(engel_con_top);
                 GameObject de_con = Instantiate(devil_con_top);
-                //生成した敵の座標を決定する
+                //座標を決定する
                 en_con.transform.position = new Vector3(-4, 8, 0);
                 de_con.transform.position = new Vector3(4, 8, 0);
                 //経過時間を初期化して再度時間計測を始める
@@ -79,10 +79,10 @@ public class prehub_con: MonoBehaviour
                 {
                     interval -= 0.2f;
                 }
-                //enemyをインスタンス化する(生成する)
+                //インスタンス化する(生成する)
                 GameObject en_con = Instantiate(engel_con_top);
                 GameObject de_con = Instantiate(devil_con_top);
-                //生成した敵の座標を決定する
+                //座標を決定する
                 en_con.transform.position = new Vector3(4, 8, 0);
                 de_con.transform.position = new Vector3(-4, 8, 0);
                 //経過時間を初期化して再度時間計測を始める
@@ -95,10 +95,10 @@ public class prehub_con: MonoBehaviour
                 {
                     interval -= 0.2f;
                 }
-                //enemyをインスタンス化する(生成する)
+                //インスタンス化する(生成する)
                 GameObject en_con = Instantiate(engel_con_Diagonallyup_left);
                 GameObject de_con = Instantiate(devil_con_Diagonallyup_right);
-                //生成した敵の座標を決定する
+                //座標を決定する
                 en_con.transform.position = new Vector3(-12, 4, 0);
                 de_con.transform.position = new Vector3(12, 4, 0);
                 //経過時間を初期化して再度時間計測を始める
@@ -111,10 +111,10 @@ public class prehub_con: MonoBehaviour
                 {
                     interval -= 0.2f;
                 }
-                //enemyをインスタンス化する(生成する)
+                //インスタンス化する(生成する)
                 GameObject en_con = Instantiate(engel_con_Diagonallyup_right);
                 GameObject de_con = Instantiate(devil_con_Diagonallyup_left);
-                //生成した敵の座標を決定する
+                //座標を決定する
                 en_con.transform.position = new Vector3(12, 4, 0);
                 de_con.transform.position = new Vector3(-12, 4, 0);
                 //経過時間を初期化して再度時間計測を始める
@@ -127,10 +127,10 @@ public class prehub_con: MonoBehaviour
                 {
                     interval -= 0.2f;
                 }
-                //enemyをインスタンス化する(生成する)
+                //インスタンス化する(生成する)
                 GameObject en_con = Instantiate(engel_con_side_left);
                 GameObject de_con = Instantiate(devil_con_side_right);
-                //生成した敵の座標を決定する
+                //座標を決定する
                 en_con.transform.position = new Vector3(-13, -5, 0);
                 de_con.transform.position = new Vector3(13, -5, 0);
                 //経過時間を初期化して再度時間計測を始める
@@ -143,10 +143,10 @@ public class prehub_con: MonoBehaviour
                 {
                     interval -= 0.2f;
                 }
-                //enemyをインスタンス化する(生成する)
+                //インスタンス化する(生成する)
                 GameObject en_con = Instantiate(engel_con_side_right);
                 GameObject de_con = Instantiate(devil_con_side_left);
-                //生成した敵の座標を決定する
+                //座標を決定する
                 en_con.transform.position = new Vector3(13, -5, 0);
                 de_con.transform.position = new Vector3(-13, -5, 0);
                 //経過時間を初期化して再度時間計測を始める

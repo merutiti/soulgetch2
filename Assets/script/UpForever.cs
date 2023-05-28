@@ -16,7 +16,7 @@ public class UpForever : MonoBehaviour {
     }
 
     void FixedUpdate() { // ずっと行う（一定時間ごとに）
-		this.transform.Translate(0 ,speed / 50, 0); // 垂直移動する
+		this.transform.Translate(0 ,speed / 50, 0); 
 	}
 }
 
